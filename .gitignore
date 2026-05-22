@@ -2,10 +2,16 @@
 venv/
 .env/
 
-# huge data
-crawl_analysis/
+# huge data (ignore contents, not folder itself)
+crawl_analysis/*
+!crawl_analysis/
+!crawl_analysis/crawler_main.sh
+!crawl_analysis/README.md
+!crawl_analysis/nohup.out
+
 protocols_based_probe/
 phase_*/
+
 *.parquet
 *.csv
 *.txt
@@ -13,6 +19,5 @@ phase_*/
 *.log
 nohup.out
 
-# system
 __pycache__/
 *.pyc
