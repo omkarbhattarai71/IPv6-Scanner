@@ -2,7 +2,7 @@
 source ~/IPv6-Scanner/venv/bin/activate
 
 # Run below script to start the probing
-nohup bash crawler_main.sh phase > nohup.out 2>&1 &   # phase = date(in format DD_MM_YY  in the ipv6-crawler-batches/batches/ arrived at the tail of candidates on google cloud buckets
+``` nohup bash crawler_main.sh phase > nohup.out 2>&1 & ```   # phase = date(in format DD_MM_YY  in the ipv6-crawler-batches/batches/ arrived at the tail of candidates on google cloud buckets
 
 # IPv6 Multi-Protocol Discovery & Fingerprinting Pipeline
 
@@ -38,25 +38,12 @@ The pipeline uses:
 
 ---
 
-## Fingerprinting
-
-Using ZGrab2:
-
-- HTTP headers
-- HTTPS metadata
-- TLS certificates
-- HSTS support
-- Server banners
-- Common Name (CN)
-
----
-
 # Project Structure
 
 ```bash
 IPv6-Scanner/
 │
-├── crawler.sh
+├── crawler_main.sh
 ├── requirements.txt
 ├── venv/
 │
@@ -265,7 +252,7 @@ bash crawler.sh <phase_date>
 Example:
 
 ```bash
-bash crawler.sh 21_04_26
+bash crawler_main.sh 21_04_26
 ```
 
 ---
@@ -335,7 +322,7 @@ Using ZGrab2:
 - HTTP response collection
 - TLS handshake
 - Certificate extraction
-- Header analysis
+- Protocols based response analysis
 
 Outputs:
 
@@ -378,18 +365,6 @@ Example:
 ```csv
 "2600:1901::1","success","nginx","","example.com",True,False,True,False,False,False
 ```
-
----
-
-# Example Fingerprinting Data
-
-Collected metadata includes:
-
-- HTTP status
-- Server header
-- HSTS policy
-- TLS certificate CN
-- HTTPS support
 
 ---
 
