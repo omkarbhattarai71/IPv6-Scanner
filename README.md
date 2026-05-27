@@ -246,7 +246,7 @@ ip -6 addr
 ## Usage
 
 ```bash
-bash crawler.sh <phase_date>
+bash crawler_main.sh <phase_date>
 ```
 
 Example:
